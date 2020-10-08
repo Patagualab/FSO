@@ -1,0 +1,7 @@
+Práctica basada en la creación de un sistema concurrente de comprobación de números capicúa, basado en el siguiente esquema de hilos en paralelo:
+
+ Productor: Genera de manera aleatoria 75 números enteros en el rango [0,999] y los almacena en forma de string en el buffer circular "buffer1" compartido con los consumidores.
+
+ Cosumidores: recogen las cadenas del "buffer1", calculan si es una cantidad capicúa o no y generan un string con la respuesta que se almacena en el segundo buffer circular "buffer2" compartido con el consumidor final.
+
+ Consumidor Final: recoge la información almacenada en "buffer2" y la va almacenando en un fichero.
